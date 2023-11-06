@@ -1,11 +1,9 @@
 import http.cookies
 import os
 
-# Отримання cookies із запиту
 comments_cookie = http.cookies.SimpleCookie(os.environ.get("HTTP_COOKIE"))
 comments_count = int(comments_cookie.get("comments_count").value) if "comments_count" in comments_cookie else 0
 
-# Виведення HTML-коду із кількістю коментарів і самими коментарями, а також кнопкою "Видалити cookies"
 print("Content-type:text/html\r\n\r\n")
 template_html = f"""
 <!DOCTYPE html>
