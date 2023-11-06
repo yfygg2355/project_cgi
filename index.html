@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма коментарів</title>
+</head>
+<body>
+    <h1>Блог: Додати коментар</h1>
+    <form action="/cgi-bin/form_handler.py" method="post">
+        Ваше ім'я: <input type="text" name="username" placeholder="Ваше ім'я">
+        <br>
+        Коментар:
+        <br>
+        <textarea name="comment" rows="4" cols="50" placeholder="Ваш коментар"></textarea>
+        <br>
+        <input type="radio" name="lang" value="en"> Англійська
+        <input type="radio" name="lang" value="ua"> Українська
+        <br>
+        <input type="submit" value="Відправити коментар">
+    </form>
+</body>
+</html>
